@@ -8,7 +8,6 @@ body {
   margin: 0.8em auto;
   font-family: 'Lato', Calibri, Arial, sans-serif;
   background-color: #3798AE;
-  text-align: center;
   border-radius: 4px;
 }
 nav{
@@ -34,11 +33,27 @@ input {
 ul {
   list-style: none;
 }
-ul li {
-  display: inline;
+
+h1{
+  font-weight: 900;
+  font-size: 3em;
+  padding: 0.8em;
+  color: #fff;
 }
 h1, h2 {
   text-align: center;
+}
+h2{
+  margin: 0 auto;
+  background: #E9556E;
+  padding: 1em 0.4em;
+  font-size: 1.5em;
+  font-weight: 400;
+  display: block;
+  line-height: 1em;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  color: #fff;
 }
 main {
   display: block;
@@ -70,7 +85,7 @@ div.what{
   background: hotpink;
   position: relative;
   height: auto;
-  width: 600px;
+  width: auto;
   border-radius: 3px;
   top: 15%;
   margin: auto auto;
@@ -85,6 +100,12 @@ div.what{
   background: rgba(0,0,0,0.1);
   border-radius: 3px  3px 0 0;
 }
+.what > div ul li{
+  padding: 5px 0;
+  display: block;
+  list-style-type: disc;
+  line-height: 1.5em;
+}
 .what > div {
   padding: 15px 40px 30px;
   margin: 0;
@@ -93,14 +114,77 @@ div.what{
 }
 .what > button {
   display: block;
-  font-size: 0.8em;
   font-weight: 500;
-  background: #89898C;
   color: black;
-  padding: 0.5em 2em;
+  padding: 0.5em 1em;
   margin-bottom: 50px;
-  border-radius: 3px;
   margin-left: auto;
   margin-right: auto;
-  text-decoration: none;
+  background: #89898C;
+  font-size: 1em;
+  border: none;
+  border-radius: 4px;
+}
+div.instructions{
+  margin:100px;
+}
+.game{
+  position: relative;
+  background-color: #445794;
+  width: 380px;
+  height: 380px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  margin: 0 auto;
+}
+input {
+  width: 300px;
+  height: 50px;
+  display: block;
+  padding: 0.8em 0;
+  margin: 0.8em auto 0;
+  background: #62607E;
+  color: #fff;
+  border: solid 1px #101320;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+input.text{
+  text-align: center;
+  padding: 0.2em;
+  font-size: 2em;
+}
+form > button {
+  background: #292E46;
+  color: #fff;
+  font-size: 2em;
+  padding: 0.2em;
+  border: solid 1px #101320;
+  border-radius: 4px;
+  
+}
+ul.history{
+  height: 80px;
+  margin: 10px auto 0;
+  padding: 0.5em;
+  display: block;
+  line-height: 2em;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  color: #fff;
+  overflow: auto;
+}
+ul.history li{
+  display: inline;
+  background-color: #62607E;
+  padding: 0.3em;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  width: 95%;
+  border: solid 1px #101320;  
+  margin: 0.2em;
+  color: #fff;
 }

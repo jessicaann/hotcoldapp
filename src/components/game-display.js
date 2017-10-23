@@ -12,7 +12,7 @@ export default class GameDisplay extends React.Component{
             random: 0,
             guess: 0,
             history: [],
-            feedback: '',
+            feedback: 'Give it a shot!',
             pageToggle: false
         }
     }
@@ -61,7 +61,8 @@ export default class GameDisplay extends React.Component{
             random: 0,
             guess: 0,
             history: [],
-            feedback: ''
+            feedback: 'Give it a shot!',
+            pageToggle: false
         });
     }
     setToggle(value){
@@ -80,7 +81,7 @@ export default class GameDisplay extends React.Component{
                         </ul>
                     </nav>
                     <h1>Hot or Cold</h1>
-                    <main>
+                    <main className='game'>
                         <Feedback text={this.state.feedback} />
                         <GuessInput 
                         value={this.state.guess}

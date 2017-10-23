@@ -5,7 +5,7 @@ export const WhatPage = (props) => {
         <div className='overlay'>
             <div className='what'>
                 <h1>Here's how to play</h1>
-                <div>
+                <div className='instructions'>
                     <p>This is a Hot or Cold Number Guessing Game. The game goes like this:</p>
                     <ul>
                         <li>1. I pick a random secret number between 1 to 100 and keep it hidden.</li>

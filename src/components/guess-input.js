@@ -7,7 +7,7 @@ export const GuessInput = (props) => {
     }
     return(
         <form onSubmit={ submitGuess }>
-            <input placeholder="Enter Guess" value={props.value}
+            <input className='text' placeholder="Enter Guess" value={props.value}
             onChange={ e => props.setGuess( e.target.value ) } />
             <button type="submit">Guess</button>
         </form>
