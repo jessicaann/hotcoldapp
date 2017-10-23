@@ -1,0 +1,106 @@
+*{
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  width: 98%;
+  height: 96%;
+  margin: 0.8em auto;
+  font-family: 'Lato', Calibri, Arial, sans-serif;
+  background-color: #3798AE;
+  text-align: center;
+  border-radius: 4px;
+}
+nav{
+  position: relative;
+  height: 10%;
+  padding: 1em;
+}
+nav ul li:first-child{
+  float: left;
+}
+nav ul li:last-child{
+  float: right;
+}
+nav ul li{
+  color: white;
+  font-size: 1.2em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+input {
+  background: #FFFFFF;
+}
+ul {
+  list-style: none;
+}
+ul li {
+  display: inline;
+}
+h1, h2 {
+  text-align: center;
+}
+main {
+  display: block;
+  margin: auto;
+}
+form {
+  margin: auto;
+  width: 200px;
+}
+form input {
+  width: 200px;
+}
+form button {
+  width: 200px;
+  margin-top: 20px;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background: hotpink;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  z-index: 1000;
+}
+div.what{
+  background: hotpink;
+  position: relative;
+  height: auto;
+  width: 600px;
+  border-radius: 3px;
+  top: 15%;
+  margin: auto auto;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+.what h3{
+  margin: 0;
+  padding: 0.4em;
+  text-align: center;
+  font-size: 2.4em;
+  font-weight: 300;
+  background: rgba(0,0,0,0.1);
+  border-radius: 3px  3px 0 0;
+}
+.what > div {
+  padding: 15px 40px 30px;
+  margin: 0;
+  font-weight: 300;
+  font-size: 1.15em;
+}
+.what > button {
+  display: block;
+  font-size: 0.8em;
+  font-weight: 500;
+  background: #89898C;
+  color: black;
+  padding: 0.5em 2em;
+  margin-bottom: 50px;
+  border-radius: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+}
