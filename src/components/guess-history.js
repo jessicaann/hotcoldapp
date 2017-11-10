@@ -1,4 +1,6 @@
 import React from 'react';
+import {connect} from 'react-redux';
+
 
 export const History = (props) => {
     return(
@@ -12,4 +14,8 @@ export const History = (props) => {
             </ul>
         </div>
     );
-}
+} 
+const mapStateToProps = state => ({
+    GuessHistory: state.history
+})
+export default connect(mapStateToProps)(History);

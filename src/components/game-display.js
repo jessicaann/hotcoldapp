@@ -1,74 +1,28 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
+import {} from '../actions'; //don't forget to add in the actions
 import { Feedback } from './feedback';
 import { GuessInput } from './guess-input';
 import { History } from './guess-history';
 import { WhatPage } from './whatpage';
 
-export default class GameDisplay extends React.Component{
-    constructor(props){
-        super(props);
-        this.state = {
-            random: 0,
-            guess: 0,
-            history: [],
-            feedback: 'Give it a shot!',
-            pageToggle: false
-        }
-    }
+export class GameDisplay extends React.Component {
+    
     componentWillMount(){
-        this.setState({
-            random: this.generateRand()
-        });
+        this.props.dispatch(generateRand());
     }
-    generateRand(){
-        return Math.floor(Math.random()*101)
+    setGuess(guess) { 
+        this.props.dispatch(setGuess(guess));
     }
-    setGuess(guess) {
-        this.setState({
-            guess
-        });
-    }
-    onGuess(){
-        let {guess, random} = this.state;
-        let feedback;
-        const difference = Math.abs(guess - this.state.random);
-        if(guess > 100){
-            feedback = 'Take it down a notch.'
-        }
-        else if (difference >= 50) {
-            feedback = 'Very cold!';
-        }
-        else if (difference >= 30) {
-            feedback = 'Cold...';
-        }
-        else if (difference >= 10) {
-            feedback = 'Kinda warm...';
-        }
-        else if (difference >= 1) {
-            feedback = 'Hot!';
-        }
-        else {
-            feedback = 'You got it! Play again?';
-        }
-        this.setState({
-            history: [...this.state.history, guess],
-            feedback
-        })
+    onGuess(guess){
+        this.props.dispatch(evaluateGuess());
     }
     newGame(){
-        this.setState({
-            random: 0,
-            guess: 0,
-            history: [],
-            feedback: 'Give it a shot!',
-            pageToggle: false
-        });
+        this.props.dispatch(newGame());
     }
     setToggle(value){
-        this.setState({
-            pageToggle: value
-        })
+        this.props.dispatch(setToggle(value));
     }
     render(){
         if(this.state.pageToggle === false) {
@@ -99,6 +53,16 @@ export default class GameDisplay extends React.Component{
         
     }
 }
+export const mapStateToProps = state => ({
+    random: state.random,
+    guess: state.guess,
+    history: state.history,
+    feedback: state.feedback,
+    pageToggle: state.pageToggle
+});
+
+export default connect(mapStateToProps)(GameDisplay);
+
 
 //add a nav/header to the game-display for the What and the New Game buttons
 // 1) on page load, generate a random number and store in the state

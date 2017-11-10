@@ -1,8 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux';
 import './index.css';
+import store from './store';
 import GameDisplay from './components/game-display';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<GameDisplay />, document.getElementById('root'));
+ReactDOM.render(
+    <Provider store={store}>
+        <GameDisplay />
+    </Provider>,
+document.getElementById('root')
+);
 registerServiceWorker();
