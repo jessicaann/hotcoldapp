@@ -1,7 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-
-import {} from '../actions'; //don't forget to add in the actions
+import {generateRand, setGuess, evaluateGuess, newGame, setToggle} from '../actions';
 import { Feedback } from './feedback';
 import { GuessInput } from './guess-input';
 import { History } from './guess-history';
@@ -37,7 +36,7 @@ export class GameDisplay extends React.Component {
                     <h1>Hot or Cold</h1>
                     <main className='game'>
                         <Feedback text={this.state.feedback} />
-                        <GuessInput 
+                        < GuessInput 
                         value={this.state.guess}
                         onGuess={guess => this.onGuess(guess)} 
                         setGuess={guess => this.setGuess(guess)}
@@ -53,13 +52,19 @@ export class GameDisplay extends React.Component {
         
     }
 }
-export const mapStateToProps = state => ({
+
+console.log(state);
+
+const mapStateToProps = state => {
+    console.log(state);
+    return {
     random: state.random,
     guess: state.guess,
     history: state.history,
     feedback: state.feedback,
     pageToggle: state.pageToggle
-});
+    }
+};
 
 export default connect(mapStateToProps)(GameDisplay);
 

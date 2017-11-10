@@ -1,5 +1,4 @@
 import React from 'react';
-import {connect} from 'react-redux';
 
 
 export const WhatPage = (props) => {
@@ -21,5 +20,4 @@ export const WhatPage = (props) => {
         </div>
     );
 }
-export default connect()(WhatPage);
 

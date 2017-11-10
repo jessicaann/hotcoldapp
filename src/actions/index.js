@@ -1,7 +1,6 @@
 export const GENERATE_RAND = 'GENERATE_RAND';
 export const generateRand = () => ({
-    type: GENERATE_RAND,
-    random 
+    type: GENERATE_RAND
 })
 
 export const SET_GUESS = 'SET_GUESS';
@@ -11,25 +10,18 @@ export const setGuess = guess => ({
 })
 
 export const EVALUATE_GUESS = 'EVALUATE_GUESS';
-export const evaluateGuess = (guess) => ({ //do I need to pass the guess in?
+export const evaluateGuess = guess => ({ //do I need to pass the guess in?
     type: EVALUATE_GUESS,
-    history,
-    feedback,
-    guess: guess
+    guess
 })
 
 export const NEW_GAME = 'NEW_GAME';
 export const newGame = () => ({
-    type: NEW_GAME,
-    random,
-    guess,
-    history,
-    feedback,
-    pageToggle
+    type: NEW_GAME
 })
 
 export const SET_TOGGLE = 'SET_TOGGLE';
-export const setToggle = (value) => ({
+export const setToggle = value => ({
     type: SET_TOGGLE,
     pageToggle: value
 })

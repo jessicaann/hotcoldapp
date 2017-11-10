@@ -1,5 +1,4 @@
 import React from 'react';
-import {connect} from 'react-redux';
 
 
 export const GuessInput = (props) => {
@@ -15,4 +14,3 @@ export const GuessInput = (props) => {
         </form>
     );
 }
-export default connect(mapStateToProps)(GuessInput);
