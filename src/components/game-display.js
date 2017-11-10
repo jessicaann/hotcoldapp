@@ -53,10 +53,7 @@ export class GameDisplay extends React.Component {
     }
 }
 
-console.log(state);
-
 const mapStateToProps = state => {
-    console.log(state);
     return {
     random: state.random,
     guess: state.guess,

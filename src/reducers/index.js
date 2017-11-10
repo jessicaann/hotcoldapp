@@ -7,8 +7,7 @@ const initialState = {
     feedback: 'Give it a shot!',
     pageToggle: false
 };
-export const gameReducer = (state, action) => {
-    state = state || initialState;
+export const gameReducer = (state = initialState, action) => {
     if (action.type === actions.GENERATE_RAND) {
         return Object.assign({}, state, {
             random: Math.floor(Math.random()* (100-1) + 1)
@@ -51,4 +50,5 @@ export const gameReducer = (state, action) => {
         return Object.assign({}, state, {initialState}
         );
     }
+    return state;
 }

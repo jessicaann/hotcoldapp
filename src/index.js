@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import './index.css';
 import store from './store';
-import App from './app';
+import GameDisplay from './components/game-display';
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
     <Provider store={store}>
-        <App />
+        <GameDisplay />
     </Provider>,
 document.getElementById('root')
 );
